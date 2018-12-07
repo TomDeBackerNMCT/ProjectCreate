@@ -1,0 +1,1664 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+/*------------------------------------*\
+#Variables
+\*------------------------------------*/
+
+:root {
+    /* colors */
+    --color-alpha-xxx-light: #FFB6BB;
+    --color-alpha-xx-light: #FF9EA5;
+    --color-alpha-x-light: #FF868E;
+    --color-alpha-light: #FF6E78;
+    --color-alpha: #FF5662;
+    --color-alpha-dark: #DA4954;
+    --color-alpha-x-dark: #B63D46;
+    --color-alpha-xx-dark: #913138;
+    --color-alpha-xxx-dark: #6D242A;
+    --color-neutral-xxxx-light: #F5F6FA;
+    --color-neutral-xxx-light: #E2E3E7;
+    --color-neutral-xx-light: #caccd4;
+    --color-neutral-x-light: #b5b6c0;
+    --color-neutral-light: #a0a1ad;
+    --color-neutral: #8b8c9a;
+    --color-neutral-dark: #757787;
+    --color-neutral-x-dark: #606274;
+    --color-neutral-xx-dark: #4b4c60;
+    --color-neutral-xxx-dark: #35374d;
+    --color-neutral-xxxx-dark: #20223a;
+    --color-label: #dbdce655;
+    /* Shadows */
+    --shadow-color: #20223a15;
+    --inset-shadow: inset 0 1px 1px var(--shadow-color);
+    /* border radius */
+    --radius: 3px;
+    /* transitions */
+    --transition-alpha: .1s ease-out;
+}
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Poppins', Helvetica, arial, sans-serif;
+    color: var(--color-neutral-xxxx-light);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #262837;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #0077CC;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: #0077CC;
+    color: white;
+    text-shadow: none;
+}
+
+/*------------------------------------*\
+  #Elements
+\*------------------------------------*/
+
+/*
+    Elements: Images
+    ---
+    Default markup for images to make them responsive
+*/
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 24px;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+h4, h5, h6 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 24px;
+}
+
+p, ol, ul, dl, table, address, figure {
+    margin: 0 0 24px;
+}
+
+ul, ol {
+    padding-left: 24px;
+}
+
+li ul, li ol {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-style: normal;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+blockquote * {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+figcaption {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: LightGrey;
+    margin: 0 0 24px;
+}
+
+a {
+    color: RoyalBlue;
+    transition: all .1s ease-in-out;
+}
+
+a:visited, a:active {
+    color: BlueViolet;
+}
+
+a:hover, a:focus {
+    color: Crimson;
+}
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+.o-row {
+    position: relative;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+    .o-row {
+        position: relative;
+        padding: 24px 24px 0;
+        overflow-x: hidden;
+    }
+}
+
+/* color modifiers */
+
+.o-section--background-color-black {
+    background-color: #0D141A;
+}
+
+.o-text--color-grey {
+    color: #7C7E80;
+}
+
+.o-text--color-title-white {
+    color: white;
+}
+
+/* size modifiers */
+
+.o-row--sm {
+    padding-top: 0px;
+    padding-bottom: 24px;
+}
+
+.o-row--lg {
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.o-row--xl {
+    padding-top: 72px;
+    padding-bottom: 48px;
+}
+
+/* specific modifiers */
+
+@media (min-width: 768px) {
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+    .o-row--lg {
+        padding-top: 72px;
+        padding-bottom: 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    .o-row--xl {
+        padding-top: 96px;
+        padding-bottom: 72px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+    .o-row--lg {
+        padding-top: 120px;
+        padding-bottom: 48px;
+    }
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20.375em;
+}
+
+@media (min-width: 768px) {
+    .o-container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 32.875em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .o-container {
+        margin-left: 50px;
+        margin-right: 50px;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-container {
+        margin-left: 122px;
+        margin-right: 122px;
+        max-width: 100%;
+    }
+}
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+    position: relative;
+}
+
+.o-section+.o-section {
+    padding-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg+.o-section--lg, .o-section--xl+.o-section--xl {
+        padding-top: 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    .o-section--xl+.o-section--xl {
+        padding-top: 72px;
+    }
+}
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+
+.o-layout {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.o-layout__item {
+    width: 100%;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+    margin: 0 -12px;
+}
+
+.o-layout--gutter>.o-layout__item {
+    padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+    margin: 0 -6px;
+}
+
+.o-layout--gutter-sm>.o-layout__item {
+    padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+    margin: 0 -24px;
+}
+
+.o-layout--gutter-lg>.o-layout__item {
+    padding: 0 24px;
+}
+
+.o-layout--gutter-xl {
+    margin: 0 -48px;
+}
+
+.o-layout--gutter-xl>.o-layout__item {
+    padding: 0 48px;
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+    flex-direction: row-reverse;
+}
+
+@media (min-width: 1024px) {
+    .o-layout--row-reverse-bp4 {
+        flex-direction: row-reverse;
+    }
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+    justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+    justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+    justify-content: center;
+}
+
+.o-layout--justify-space-around {
+    justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+    justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+    align-items: flex-start;
+}
+
+.o-layout--align-end {
+    align-items: flex-end;
+}
+
+.o-layout--align-center {
+    align-items: center;
+}
+
+.o-layout--align-baseline {
+    align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+
+.o-layout--align-content-start {
+    align-content: start;
+}
+
+.o-layout--align-content-end {
+    align-content: end;
+}
+
+.o-layout--align-content-center {
+    align-content: center;
+}
+
+.o-layout--align-content-space-around {
+    align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+    align-content: space-between;
+}
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+    list-style: none;
+    padding: 0;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+/*
+    Main index Background
+
+*/
+
+.c-loading {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #262837;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 175ms ease-in-out;
+}
+
+.c-loading-path__middle {
+    animation: loading-middle 1.5s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.c-loading-path__right {
+    animation: loading-right 1.5s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.c-loading-path__left {
+    animation: loading-left 1.5s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.c-loading-path__triangle {
+    animation: loading-triangle 1.5s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes loading-middle {
+    50% {
+        transform: scale(.85);
+    }
+}
+
+@keyframes loading-right {
+    50% {
+        transform: translate(50px, 100px);
+    }
+}
+
+@keyframes loading-left {
+    50% {
+        transform: translate(-50px, 100px);
+    }
+}
+
+@keyframes loading-triangle {
+    50% {
+        transform: scale(1.4);
+    }
+}
+
+.c-loaded {
+    display: none;
+    transition: opacity 175ms ease-in-out;
+    animation: loaded-page 275ms linear;
+}
+
+@keyframes loaded-page {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+.c-background-index {
+    background-image: url(../img/jpg/Backgroundindex.jpg);
+    background-position: 0 -200px;
+    background-attachment: fixed;
+    min-height: 60vh;
+    width: 100%;
+    /* border-bottom: 3px solid var(--color-neutral-x-dark); */
+    border-collapse: collapse;
+    box-shadow: 0px -4px 15px 1px #000000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.c-background__layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(38, 40, 55, .8) 0%, rgba(38, 40, 55, .85) 50%, rgba(38, 40, 55, .95) 100%);
+    opacity: 0;
+    transition: all 500ms cubic-bezier(0.390, 0.325, 0.160, 0.995);
+}
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+    height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.c-logo__symbol {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .c-logo {
+        height: 16px;
+    }
+}
+
+/*
+    Component: mobile nav
+    ---
+    Dedicated mobile nav component
+*/
+
+.c-nav-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.c-nav-trigger__svg {
+    fill: #202024;
+    height: 100%;
+}
+
+.c-nav {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.c-nav--meta {
+    font-size: 16px;
+    transition: .3s ease-in-out;
+}
+
+.c-nav--meta:hover {
+    color: hsla(205, 100%, 20%, 0.9);
+}
+
+.c-nav__link {
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+    padding: 8px 0;
+}
+
+.c-nav__link, .c-nav__link:visited, .c-nav__link:active {
+    color: #0D141A;
+}
+
+.c-nav__link--meta, .c-nav__link--meta:visited, .c-nav__link--meta:active {
+    color: #0095FF;
+    transition: 0.3s ease-in-out;
+}
+
+.c-nav__link:hover, .c-nav__link:focus {
+    color: hsl(205, 100%, 50%);
+}
+
+@media (min-width: 992px) {
+    .c-nav__list {
+        display: flex;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    .c-nav__link {
+        padding: 8px 16px;
+    }
+}
+
+.cta__link {
+    display: inline-block;
+    line-height: 24px;
+    padding: 14px 32px 10px 32px;
+    background: #0095FF;
+    color: white;
+    box-shadow: hsla(208, 50%, 10%, 0.25) 0 2px 8px;
+    border-radius: 4px;
+    transition: .3s ease-in-out;
+    background-size: 150% auto;
+}
+
+.cta__link a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+    transition: .3s ease-in-out;
+}
+
+.cta__link:hover {
+    box-shadow: hsla(208, 50%, 10%, 0.23) 3px 5px 8px;
+    background-position: right center;
+}
+
+.cta__link:hover a {
+    color: hsla(205, 100%, 20%, 0.9);
+}
+
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header-index {
+    text-align: center;
+    color: #fff6f5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: 300ms ease-in-out;
+    height: 50%;
+    width: 514px;
+    justify-content: center;
+    margin-top: 80px;
+    position: sticky;
+    top: 0;
+    animation: fade-in cubic-bezier(0.785, 0.135, 0.15, 0.86) 300ms forwards;
+}
+
+.c-header-index__input {}
+
+.c-header-index__image {
+    height: 150px;
+    transition: 300ms ease-in-out;
+}
+
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.c-header__nav {
+    display: none;
+}
+
+.c-header--box-shadow {
+    box-shadow: 1px 0 4px hsla(208, 50%, 10%, 10%);
+}
+
+.c-header>.c-header__logo {
+    padding: 24px 24px 0;
+}
+
+.c-header>.c-header__mobile-nav-trigger {
+    padding: 24px 24px 0;
+}
+
+@media (min-width: 992px) {
+    .c-header__nav {
+        display: block;
+    }
+    .c-header__nav--main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 12px;
+    }
+    .c-header__mobile-nav-trigger {
+        display: none;
+    }
+    .c-header>.c-header__logo {
+        padding: 0;
+    }
+    .c-header-row {
+        padding: 0 50px;
+    }
+    .c-header {
+        padding-top: 16px;
+    }
+}
+
+.c-head {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20.375em;
+}
+
+@media (min-width: 992px) {
+    .c-head {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 526px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .c-head {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 736px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .c-head {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 804px;
+    }
+}
+
+.c-leaderboard {
+    width: 400px;
+    height: auto;
+    background-color: #00000030;
+    overflow: hidden;
+    border-radius: 3px;
+    margin: 16px;
+    margin-top: 40px;
+    position: relative;
+    box-shadow: 1px 4px 10px 1px #00000040;
+}
+
+.c-leaderboard--title {
+    height: 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-neutral-xxx-dark);
+    padding: 8px;
+}
+
+.c-leaderboard--title__text {
+    line-height: 40px;
+    font-size: 32px;
+    margin: 0;
+}
+
+.c-leaderboard__place {
+    width: 32px;
+    margin: 8px 8px;
+    font-family: 'Poppins';
+}
+
+/* .c-leaderboard--score::after {
+    content: attr(top-score);
+    position: absolute;
+    top: 0;
+    width: 300px;
+    left: 0;
+    height: 24px;
+    background-color: var(--color-alpha-x-dark);
+} */
+
+.c-leaderboard__text {
+    margin: 8px 8px;
+    padding: 0;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+}
+
+.c-leaderboard__score {
+    margin: 8px 8px;
+    padding: 0;
+    font-family: 'Share Tech Mono';
+    font-size: 18px;
+    text-shadow: 1px 1px 3px #FFFFFF50;
+}
+
+.c-leaderboard-field {
+    -webkit-transition: all 275ms cubic-bezier(0.900, 0.005, 0.750, 0.750);
+    -moz-transition: all 275ms cubic-bezier(0.900, 0.005, 0.750, 0.750);
+    -o-transition: all 275ms cubic-bezier(0.900, 0.005, 0.750, 0.750);
+    transition: all 275ms cubic-bezier(0.900, 0.005, 0.750, 0.750);
+    align-items: center;
+}
+
+.c-leaderboard-field+.c-leaderboard-field {
+    box-shadow: inset 0 1px #FFFFFF08, 0 -1px #00000030;
+}
+
+.c-leaderboard-field:hover {
+    background-color: var(--color-neutral-xxx-dark);
+    cursor: pointer;
+    -webkit-transition: all 175ms cubic-bezier(0.900, 0.005, 0.750, 0.750);
+    -moz-transition: all 175ms cubic-bezier(0.900, 0.005, 0.750, 0.750);
+    -o-transition: all 175ms cubic-bezier(0.900, 0.005, 0.750, 0.750);
+    transition: all 175ms cubic-bezier(0.900, 0.005, 0.750, 0.750);
+    transform: scale(1.01);
+}
+
+.c-leaderboard-animation {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+    animation: leaderboard 2s linear;
+    animation-delay: 350ms;
+    stroke: #FFF;
+    fill: #FFF;
+}
+
+@keyframes leaderboard {
+    0% {
+        stroke-dashoffset: 1200;
+        fill: #FFFFFF00;
+    }
+    60% {
+        fill: #FFFFFF00;
+    }
+    99% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        fill: #FFF;
+    }
+}
+
+.c-card-news {
+    width: 400px;
+    height: 480px;
+    background-color: #00000030;
+    overflow: auto;
+    border-radius: 3px;
+    margin: 16px;
+    margin-top: 40px;
+    position: relative;
+    box-shadow: 1px 4px 10px 1px #00000040;
+}
+
+.c-card {
+    background-color: #00000030;
+    overflow: hidden;
+    border-radius: 3px;
+    margin: 16px;
+    margin-top: 40px;
+    position: relative;
+    box-shadow: 1px 4px 10px 1px #00000040;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.c-card__title {
+    height: 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-neutral-xxx-dark);
+    padding: 8px;
+    position: sticky;
+    top: 0;
+}
+
+.c-card-news::-webkit-scrollbar {
+    width: 8px;
+    background-color: #00000001;
+    border-radius: 3px;
+    opacity: .9;
+}
+
+.c-card-news::-webkit-scrollbar-thumb {
+    width: 5px;
+    border-radius: 15px;
+    background-color: var(--color-neutral);
+}
+
+/*
+    input
+*/
+
+.c-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 1px solid var(--color-neutral-xxx-light);
+    border-radius: var(--radius);
+    color: var(--color-neutral-xxxx-dark);
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 11px 16px;
+    outline: none;
+    box-shadow: var(--inset-shadow);
+    transition: border var(--transition-alpha);
+}
+
+.c-input:hover {
+    border-color: var(--color-neutral-xxx-light);
+}
+
+.c-input:focus, .c-input:active {
+    border-color: #b90d0180;
+    box-shadow: 0 0 0 3px #b90d0130;
+}
+
+.c-input-search {
+    width: 100%;
+    height: 48px;
+    border-radius: 2px;
+    border: 2px solid var(--color-neutral-xxxx-light);
+    background-color: var(--color-neutral-xxxx-light);
+    padding: 4px 8px;
+    color: var(--color-alpha-xxx-dark);
+}
+
+.c-input-submit {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.c-search__button {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.c-search {
+    position: relative;
+    width: 400px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    transition: 275ms ease-in-out;
+}
+
+/*
+
+    profile
+
+*/
+
+.c-profile {
+    display: none;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: grow cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.275s forwards;
+    animation-delay: 0.175s;
+}
+
+.c-profile__headings {}
+
+.c-profile__name-logo {
+    height: 48px;
+    width: 48px;
+    margin-right: 16px;
+    margin-bottom: 24px;
+}
+
+.c-profile__br-logo {
+    height: 48px;
+    width: 48px;
+    transform: scale(1.45) translateX(-8px);
+}
+
+.c-profile__certs-svg {
+    margin: 0 16px;
+}
+
+.c-profile__certs-svg-text {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+}
+
+/*
+    animation
+*/
+
+@keyframes grow {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.c-grow-animation-left {
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: grow cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.275s forwards;
+    animation-delay: 0.175s;
+}
+
+.c-grow-animation-top {
+    transform: scaleX(0);
+    transform-origin: center -50px;
+    animation: grow cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.275s forwards;
+    animation-delay: 0.175s;
+}
+
+.c-fade-in-animation-top {
+    animation: fade-in cubic-bezier(0.785, 0.135, 0.15, 0.86) 300ms forwards;
+}
+
+/*
+    Component: Lead
+    ---
+    Lead type treatments to style everything that differs from standard typography elements
+*/
+
+.c-lead--sm {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.c-lead {
+    font-weight: 200;
+}
+
+.c-lead--lg {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.c-lead--xl {
+    font-size: 26px;
+    line-height: 32px;
+}
+
+.c-lead--xxl {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.c-lead--xxxl {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.c-lead--xxxxl {
+    font-size: 36px;
+    line-height: 48px;
+}
+
+@media (min-width: 768px) {
+    .c-lead--lg {
+        font-size: 23px;
+        line-height: 32px;
+    }
+    .c-lead--xl {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .c-lead--xxl {
+        font-size: 41px;
+        line-height: 48px;
+    }
+    .c-lead--xxxl {
+        font-size: 52px;
+        line-height: 64px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .c-lead--lg {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .c-lead--xl {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    .c-lead--xxl {
+        font-size: 52px;
+        line-height: 52px;
+    }
+    .c-lead--xxxl {
+        font-size: 66px;
+        line-height: 72px;
+    }
+}
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+
+.u-color-neutral-base {
+    color: grey;
+}
+
+.u-color-neutral-xx-light {
+    color: hsla(233, 18%, 88%, .55);
+}
+
+.u-color-alpha-xx-light {
+    color: #fe1909;
+}
+
+.u-color-alpha-x-light {
+    color: #ec1101;
+}
+
+.u-color-alpha-light {
+    color: #d20f01;
+}
+
+.u-color-alpha {
+    color: #FF5662;
+}
+
+.u-color-alpha-dark {
+    color: #DA4954;
+}
+
+.u-color-alpha-x-dark {
+    color: #B63D46;
+}
+
+.u-color-alpha-xx-dark {
+    color: #913138;
+}
+
+/*
+    Utilities: Text alignment
+    ---
+    Text  alignment utitlieties
+*/
+
+.u-text-align-center {
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .u-text-align-left-bp4 {
+        text-align: left;
+    }
+}
+
+/*
+    Utilities: Font weight
+    ---
+    Font weight utilities
+*/
+
+.u-text-font-weight-sm {
+    font-weight: 200 !important;
+}
+
+.u-text-font-weight-rg {
+    font-weight: 400;
+}
+
+.u-text-font-weight-bd {
+    font-weight: 700;
+}
+
+/*
+    Utilities: letter spacing
+    ---
+    letter spacing utilities
+*/
+
+.u-text-letter-spacing-sm {
+    letter-spacing: 0.5px;
+}
+
+.u-text-letter-spacing-md {
+    letter-spacing: 1px;
+}
+
+.u-text-letter-spacing-lg {
+    letter-spacing: 2px;
+}
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+    padding-top: 0 !important;
+}
+
+.u-mb-clear {
+    margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+    margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+    margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+    margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+    margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+    margin-bottom: 48px !important;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xsm {
+    max-width: 16em !important;
+}
+
+.u-max-width-sm {
+    max-width: 36em !important;
+}
+
+.u-max-width-md {
+    max-width: 45em !important;
+}
+
+.u-max-width-lg {
+    max-width: 60em !important;
+}
+
+.u-max-width-xl {
+    max-width: 75em !important;
+}
+
+.u-max-width-none {
+    max-width: none !important;
+}
+
+/*
+    Utility: Widths
+    ---
+    Utility classes to put specific widths onto elements
+    Will be mostly used on o-layout__item
+*/
+
+.u-width-auto {
+    width: auto !important;
+}
+
+.u-1-of-2 {
+    width: 50% !important;
+}
+
+.u-1-of-3 {
+    width: 33.3333333333% !important;
+}
+
+.u-2-of-3 {
+    width: 66.6666666667% !important;
+}
+
+.u-1-of-4 {
+    width: 25% !important;
+}
+
+.u-3-of-4 {
+    width: 75% !important;
+}
+
+.u-1-of-5 {
+    width: 20% !important;
+}
+
+.u-2-of-5 {
+    width: 40% !important;
+}
+
+.u-3-of-5 {
+    width: 60% !important;
+}
+
+.u-4-of-5 {
+    width: 80% !important;
+}
+
+.u-1-of-6 {
+    width: 16.6666666667% !important;
+}
+
+.u-5-of-6 {
+    width: 83.3333333333% !important;
+}
+
+@media (min-width: 576px) {
+    .u-1-of-2-bp1 {
+        width: 50% !important;
+    }
+    .u-1-of-3-bp1 {
+        width: 33.3333333333% !important;
+    }
+    .u-2-of-3-bp1 {
+        width: 66.6666666667% !important;
+    }
+    .u-1-of-4-bp1 {
+        width: 25% !important;
+    }
+    .u-3-of-4-bp1 {
+        width: 75% !important;
+    }
+    .u-1-of-5-bp1 {
+        width: 20% !important;
+    }
+    .u-2-of-5-bp1 {
+        width: 40% !important;
+    }
+    .u-3-of-5-bp1 {
+        width: 60% !important;
+    }
+    .u-4-of-5-bp1 {
+        width: 80% !important;
+    }
+    .u-1-of-6-bp1 {
+        width: 16.6666666667% !important;
+    }
+    .u-5-of-6-bp1 {
+        width: 83.3333333333% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .u-1-of-2-bp2 {
+        width: 50% !important;
+    }
+    .u-1-of-3-bp2 {
+        width: 33.3333333333% !important;
+    }
+    .u-2-of-3-bp2 {
+        width: 66.6666666667% !important;
+    }
+    .u-1-of-4-bp2 {
+        width: 25% !important;
+    }
+    .u-3-of-4-bp2 {
+        width: 75% !important;
+    }
+    .u-1-of-5-bp2 {
+        width: 20% !important;
+    }
+    .u-2-of-5-bp2 {
+        width: 40% !important;
+    }
+    .u-3-of-5-bp2 {
+        width: 60% !important;
+    }
+    .u-4-of-5-bp2 {
+        width: 80% !important;
+    }
+    .u-1-of-6-bp2 {
+        width: 16.6666666667% !important;
+    }
+    .u-5-of-6-bp2 {
+        width: 83.3333333333% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .u-1-of-2-bp3 {
+        width: 50% !important;
+    }
+    .u-1-of-3-bp3 {
+        width: 33.3333333333% !important;
+    }
+    .u-2-of-3-bp3 {
+        width: 66.6666666667% !important;
+    }
+    .u-1-of-4-bp3 {
+        width: 25% !important;
+    }
+    .u-3-of-4-bp3 {
+        width: 75% !important;
+    }
+    .u-1-of-5-bp3 {
+        width: 20% !important;
+    }
+    .u-2-of-5-bp3 {
+        width: 40% !important;
+    }
+    .u-3-of-5-bp3 {
+        width: 60% !important;
+    }
+    .u-4-of-5-bp3 {
+        width: 80% !important;
+    }
+    .u-1-of-6-bp3 {
+        width: 16.6666666667% !important;
+    }
+    .u-2-of-6-bp3 {
+        width: calc(2 / 6 * 100%) !important;
+    }
+    .u-5-of-6-bp3 {
+        width: 83.3333333333% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .u-1-of-2-bp4 {
+        width: 50% !important;
+    }
+    .u-1-of-3-bp4 {
+        width: 33.3333333333% !important;
+    }
+    .u-2-of-3-bp4 {
+        width: 66.6666666667% !important;
+    }
+    .u-1-of-4-bp4 {
+        width: 25% !important;
+    }
+    .u-3-of-4-bp4 {
+        width: 75% !important;
+    }
+    .u-1-of-5-bp4 {
+        width: 20% !important;
+    }
+    .u-2-of-5-bp4 {
+        width: 40% !important;
+    }
+    .u-3-of-5-bp4 {
+        width: 60% !important;
+    }
+    .u-4-of-5-bp4 {
+        width: 80% !important;
+    }
+    .u-1-of-6-bp4 {
+        width: 16.6666666667% !important;
+    }
+    .u-5-of-6-bp4 {
+        width: 83.3333333333% !important;
+    }
+}
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    USE THEM INLINE!
+*/
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in mobile first design
+*/
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+    *, *:before, *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a, a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after, a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr, img {
+        page-break-inside: avoid;
+    }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}
