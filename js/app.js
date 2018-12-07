@@ -93,6 +93,7 @@ function submitForm() {
                         }
                         score_minute = Number.parseFloat(score / time).toFixed(2);
                         kd = Number.parseFloat(kills / deaths).toFixed(2);
+                        general_details.innerHTML += "<div class='o-layout o-layout__item o-layout--justify-space-between c-leaderboard-field'><div class='o-layout'><p class='c-leaderboard__text'>KDR</p></div><p class='c-leaderboard__score'> " + kd + "</p></div>";
                         for (var i = 0; i < data.characters_stat_history_list.length; i++) {
                             let name = data.characters_stat_history_list[i].stat_name;
                             let all_time = data.characters_stat_history_list[i].all_time;
@@ -107,7 +108,6 @@ function submitForm() {
                                 name = "Time Spent";
                                 all_time = Math.round(Number(all_time) / 3600) + "h";
                             }
-                            general_details.innerHTML += "<div class='o-layout o-layout__item o-layout--justify-space-between c-leaderboard-field'><div class='o-layout'><p class='c-leaderboard__text'>KDR</p></div><p class='c-leaderboard__score'> " + kd + "</p></div>";
                             general_details.innerHTML += "<div class='o-layout o-layout__item o-layout--justify-space-between c-leaderboard-field'><div class='o-layout'><p class='c-leaderboard__text'>" + name.charAt(0).toUpperCase() + name.slice(1) + "</p></div><p class='c-leaderboard__score'> " + numberWithCommas(all_time) + "</p></div>";
                         }
                     })
