@@ -36,7 +36,7 @@ function submitForm() {
         }, 200);
         showHeader();
         let name = search_input.value.toLowerCase();
-        await fetch('http://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/character/?name.first_lower=' + name + '&c:resolve=faction')
+        await fetch('https://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/character/?name.first_lower=' + name + '&c:resolve=faction')
             .then(response =>
                 response.json())
             .then(async data => {
@@ -72,7 +72,7 @@ function submitForm() {
                 backgroundindex.style.backgroundImage = ("url(img/jpg/Backgroundindex" + data.character_list[0].faction.code_tag + ".jpg)");
                 let characterid = data.character_list[0].character_id;
                 showHeader();
-                await fetch('http://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/characters_stat_history/?character_id=' + characterid + '&c:limit=50&c:sort=all_time:-1')
+                await fetch('https://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/characters_stat_history/?character_id=' + characterid + '&c:limit=50&c:sort=all_time:-1')
                     .then(response =>
                         response.json())
                     .then(data => {
@@ -112,7 +112,7 @@ function submitForm() {
                         }
                     })
                     .catch(error => console.error(error))
-                await fetch('http://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/experience_rank/?rank=' + data.character_list[0].battle_rank.value + '&c:show=rank,' + data.character_list[0].faction.code_tag.toLowerCase() + '')
+                await fetch('https://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/experience_rank/?rank=' + data.character_list[0].battle_rank.value + '&c:show=rank,' + data.character_list[0].faction.code_tag.toLowerCase() + '')
                     .then(response =>
                         response.json())
                     .then(data => {
@@ -131,7 +131,7 @@ function submitForm() {
 
 async function getAPI() {
     // character?c:resolve=stat_history&stat_history.stat_name=score&c:limit=30
-    await fetch('http://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/characters_stat_history/?c:limit=10&stat_name=score&c:sort=all_time:-1&c:join=character^inject_at:character^show:name')
+    await fetch('https://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/characters_stat_history/?c:limit=10&stat_name=score&c:sort=all_time:-1&c:join=character^inject_at:character^show:name')
         .then(response =>
             response.json())
         .then(data => {
@@ -150,7 +150,7 @@ async function getAPI() {
             // }
         })
         .catch(error => console.error(error))
-    await fetch('http://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/characters_stat_history/?c:limit=10&stat_name=kills&c:sort=all_time:-1&c:join=character^inject_at:character^show:name')
+    await fetch('https://census.daybreakgames.com/s:CreateProjectTom/get/ps2:v2/characters_stat_history/?c:limit=10&stat_name=kills&c:sort=all_time:-1&c:join=character^inject_at:character^show:name')
         .then(response =>
             response.json())
         .then(data => {
